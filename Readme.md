@@ -8,7 +8,7 @@ docker compose build
 ```
 
 levantar el entorno y abrir la url 0.0.0.0:8000
-el usuario del admin de django es `oka`, password `Asdfg35$`
+el usuario del admin de django es `oka`, password `Asdfg35$`, se muestra en la consola si esta el inventario debajo de 10 y se almacena en el archivo `low _stock_alert.txt`
 ```bash
 docker compose up
 #apagar el entorno
