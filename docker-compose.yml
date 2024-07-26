@@ -9,34 +9,58 @@ services:
     command: >
       sh -c "python manage.py runserver 0.0.0.0:8000"
     volumes:
-      - .:/app
+      - app_data:/app
     ports:
       - "8000:8000"
     depends_on:
       - redis
       - celery
       - celery-beat
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DJANGO_SETTINGS_MODULE=examen.settings
+    networks:
+      - app_network
 
   celery:
     build: .
     container_name: celery_worker
     command: celery -A examen worker --loglevel=info
     volumes:
-      - .:/app
+      - app_data:/app
     depends_on:
       - redis
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DJANGO_SETTINGS_MODULE=examen.settings
+    networks:
+      - app_network
 
   celery-beat:
     build: .
     container_name: celery_beat
     command: celery -A examen beat --loglevel=info
     volumes:
-      - .:/app
+      - app_data:/app
     depends_on:
       - redis
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DJANGO_SETTINGS_MODULE=examen.settings
+    networks:
+      - app_network
 
   redis:
     image: redis:latest
     container_name: redis
     ports:
       - "6379:6379"
+    networks:
+      - app_network
+
+volumes:
+  app_data:
+
+networks:
+  app_network:
+    driver: bridge
