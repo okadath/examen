@@ -7,7 +7,7 @@ docker-compose build
 
 ```
 
-levantar el entorno
+levantar el entorno y abrir la url 0.0.0.0:8000
 ```bash
 docker-compose up
 #apagar el entorno
