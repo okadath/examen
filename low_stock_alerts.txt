@@ -100,3 +100,5 @@
 [2024-07-26 22:55] Product jabon rosa (SKU: 2) has low stock: 1 units.
 [2024-07-26 22:56] Product jabon rosa (SKU: 2) has low stock: 1 units.
 [2024-07-26 22:57] Product jabon rosa (SKU: 2) has low stock: 1 units.
+[2024-07-26 23:06] Product jabon rosa (SKU: 2) has low stock: 1 units.
+[2024-07-26 23:07] Product jabon rosa (SKU: 2) has low stock: 1 units.
