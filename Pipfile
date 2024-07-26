@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+asgiref = "==3.8.1"
+"backports.zoneinfo" = "==0.2.1"
+django = "==4.2.14"
+sqlparse = "==0.5.1"
+typing-extensions = "==4.12.2"
+tzdata = "==2024.1"
+celery = "*"
+redis = "*"
+djangorestframework = "*"
+django-rest-swagger = "*"
+drf-yasg = "*"
+pytest = "*"
+pytest-django = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
