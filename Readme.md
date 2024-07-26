@@ -3,20 +3,20 @@
 para construir el entorno:
 
 ```bash
-docker-compose build
+docker compose build
 
 ```
 
 levantar el entorno y abrir la url 0.0.0.0:8000
 ```bash
-docker-compose up
+docker compose up
 #apagar el entorno
-docker-compose down
+docker compose down
 ```
 
 levantar el entorno en segundo plano
 ```bash
-docker-compose up -d
+docker compose up -d
 
 ``` 
 
